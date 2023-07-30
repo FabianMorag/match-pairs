@@ -1,0 +1,51 @@
+.card {
+  width: 30%;
+  max-width: 80px;
+  aspect-ratio: 1;
+  position: relative;
+  cursor: pointer;
+  transition: transform .7s;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+@media screen and (min-width: 640px) {
+  .card {
+    max-width: 180px;
+  }
+}
+
+.visible {
+  transform: rotateY(0);
+}
+
+.front,
+.back {
+  color: #eee;
+  text-shadow: 1px 1px 1px #333;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-size: large;
+  font-weight: bold;
+  background-position: center;
+  background-size: cover;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 4px rgba(50, 50, 50, .3);
+}
+
+.white {
+  background: #333 !important;
+}
+
+.back {
+  background: linear-gradient(135deg, rgb(144, 154, 240), rgb(241, 181, 181));
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5rem;
+}
