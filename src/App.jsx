@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import confetti from 'canvas-confetti'
-import './App.css'
+import style from './App.module.sass'
 import { Card } from './components/Card'
 import { getRandomAnimals } from './services/animals'
 
@@ -39,14 +39,8 @@ function App () {
 
   const updateBoard = (index) => {
     firstSelection
-      ? (() => {
-          console.log('second')
-          setSecondSelection(board[index])
-        })()
-      : (() => {
-          console.log('first')
-          setFirstSelection(board[index])
-        })()
+      ? setSecondSelection(board[index])
+      : setFirstSelection(board[index])
   }
 
   const checkWin = (board) => {
@@ -78,7 +72,7 @@ function App () {
 
   return (
     <main>
-      <section className='container'>
+      <section className={style.container}>
         <h1>Match cards!</h1>
         <div>
           <label htmlFor='size'>Select number of pairs: </label>
@@ -96,7 +90,7 @@ function App () {
         </div>
         <h3>Counter {counter}</h3>
       </section>
-      <section className='board'>
+      <section className={style.board}>
         {board.map((animal, i) =>
           <Card
             key={i}
@@ -109,7 +103,7 @@ function App () {
         )}
       </section>
       {hasWin &&
-        <div className='winner'>
+        <div className={style.winner}>
           <div>
             <h1>YOU WIN!</h1>
             <h3>Completed in {counter} tries</h3>

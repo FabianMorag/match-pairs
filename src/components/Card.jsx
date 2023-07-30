@@ -1,4 +1,4 @@
-import './Card.css'
+import style from './Card.module.sass'
 
 export function Card ({ index, animal, visible, disabled, updateBoard }) {
   const handleClick = () => {
@@ -7,9 +7,9 @@ export function Card ({ index, animal, visible, disabled, updateBoard }) {
   }
 
   return (
-    <div onClick={handleClick} id={animal.name} className={`card${visible ? ' visible' : ''}`}>
-      <div className={`front${visible ? '' : ' white'}`} style={{ backgroundImage: `url(${animal.image})` }} />
-      <div className='back'>Flip card!</div>
+    <div onClick={handleClick} id={animal.name} className={`${style.card} ${visible ? style.visible : ''}`}>
+      <div className={`${style.front} ${visible ? '' : style.white}`} style={{ backgroundImage: `url(${animal.image})` }} />
+      <div className={style.back}>Flip card!</div>
     </div>
   )
 }
