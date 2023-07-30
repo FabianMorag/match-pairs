@@ -1,18 +1,20 @@
-export const animals = [
-  { name: 'bear', image: './src/board-images/bear.png' },
-  { name: 'cat', image: './src/board-images/cat.png' },
-  { name: 'cow', image: './src/board-images/cow.png' },
-  { name: 'frog', image: './src/board-images/frog.png' },
-  { name: 'koala', image: './src/board-images/koala.png' },
-  { name: 'lion', image: './src/board-images/lion.png' },
-  { name: 'monkey', image: './src/board-images/monkey.png' },
-  { name: 'mouse', image: './src/board-images/mouse.png' },
-  { name: 'penguin', image: './src/board-images/penguin.png' },
-  { name: 'pig', image: './src/board-images/pig.png' }
+import { ANIMAL_IMG } from '../board-images'
+
+const ANIMALS = [
+  { name: 'bear', image: ANIMAL_IMG.BEAR },
+  { name: 'cat', image: ANIMAL_IMG.CAT },
+  { name: 'cow', image: ANIMAL_IMG.COW },
+  { name: 'frog', image: ANIMAL_IMG.FROG },
+  { name: 'koala', image: ANIMAL_IMG.KOALA },
+  { name: 'lion', image: ANIMAL_IMG.LION },
+  { name: 'monkey', image: ANIMAL_IMG.MONKEY },
+  { name: 'mouse', image: ANIMAL_IMG.MOUSE },
+  { name: 'penguin', image: ANIMAL_IMG.PENGUIN },
+  { name: 'pig', image: ANIMAL_IMG.PIG }
 ]
 
 export function getRandomAnimals (n) {
-  const initialAnimals = [...animals]
+  const initialAnimals = [...ANIMALS]
   const listOfAnimals = []
   for (let i = 0; i < n; i++) {
     const random = Math.floor(Math.random() * initialAnimals.length)
