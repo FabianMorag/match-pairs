@@ -12,5 +12,5 @@ npm run dev
 ```
 ### Screen capture
 
-![This is a screen capture of the game.](/capture.png)
+![This is a screen capture of the game.](public/capture.png)
 
