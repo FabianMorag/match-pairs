@@ -12,5 +12,5 @@ npm run dev
 ```
 ### Screen capture
 
-![This is a screen capture of the game.](https://raw.githubusercontent.com/FabianMorag/match-pairs/master/public/capture.png)
+![This is a screen capture of the game.](/capture.png)
 
